@@ -1,0 +1,39 @@
+<apex:page extensions="ApprovalProcessCls" standardController="Deal_Risk_Assessment__c" tabStyle="Contract" showHeader="false" showChat="false" sidebar="true">
+    <apex:sectionHeader title="Choose Approvers" subtitle="{!Deal_Risk_Assessment__c.name}"/> 
+        <apex:form >
+            <apex:pageblock title="Select Approvers" mode="view" id="pageblock">
+                <apex:pageBlockButtons location="top">
+                <apex:actionStatus id="SubmitStatus">
+                    <apex:facet name="stop">
+                        <apex:outputPanel >
+                            <apex:commandButton status="SubmitStatus" value="Send To Next Approver" />
+                            <apex:commandButton status="SubmitStatus" value="Cancel" />
+                        </apex:outputPanel>
+                    </apex:facet>
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <apex:commandButton status="SubmitStatus" value="Send To Next Approver" disabled="true" />
+                            <apex:commandButton status="SubmitStatus" value="Cancel" disabled="true" />
+                        </apex:outputPanel>
+                    </apex:facet>                       
+                </apex:actionStatus>
+            </apex:pageBlockButtons>
+                <apex:pageBlockSection title="Approver 1 Information">
+                    <apex:inputField id="Approver1" label="Approver" value="{!Usr.Name}"/>
+                    <apex:inputField id="sprgn1" label="Super Region" value="{!Deal_Risk_Assessment__c.super_region__c}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Approver 2 Information">
+                    <apex:inputField id="Approver2" label="Approver" value="{!Usr.Name}"/>
+                    <apex:inputField id="sprgn2" label="Super Region" value="{!Deal_Risk_Assessment__c.super_region__c}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Approver 3 Information">
+                    <apex:inputField id="Approver3" label="Approver" value="{!Usr.Name}"/>
+                    <apex:inputField id="sprgn3" label="Super Region" value="{!Deal_Risk_Assessment__c.super_region__c}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Approver 4 Information">
+                    <apex:inputField id="Approver4" label="Approver" value="{!Usr.Name}"/>
+                    <apex:inputField id="sprgn4" label="Super Region" value="{!Deal_Risk_Assessment__c.super_region__c}"/>
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:form>
+</apex:page>

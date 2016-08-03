@@ -1,0 +1,11 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+ 
+ <apex:pageBlock mode="maindetail">
+     <apex:pageblocksection columns="1">
+     <p style="color: blue;font-family: Calibri; font-size: 15px;text-align: center"><b>Please add contract Signatories in Accounts.</b></p>
+     
+     </apex:pageblocksection>
+ 
+ </apex:pageBlock>
+ 
+ </apex:page>
